@@ -89,7 +89,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "cloverstd@gmail.com",
+      "owner": "cloverstd",
       "repo": "jianguoyun-recover"
     }
   },
