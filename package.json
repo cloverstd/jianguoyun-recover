@@ -30,7 +30,7 @@
     ]
   },
   "build": {
-    "productName": "坚果云文件恢复助手",
+    "productName": "jianguoyun-recover",
     "appId": "com.cloverstd.jianguoyun-recover",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
