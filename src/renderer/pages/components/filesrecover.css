@@ -1,0 +1,19 @@
+.files-recover-list {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.files-recover-progess {
+  padding: 20px 50px;
+}
+
+.events-recover-progess {
+  width: 100%;
+}
+
+.events-recover-progess .ant-progress-circle-gradient {
+  width: 250px !important;
+  height: 250px !important;
+  display: block;
+  margin: 20px auto;
+}
