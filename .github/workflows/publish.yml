@@ -7,8 +7,6 @@ on:
 
 jobs:
   publish:
-    # To enable auto publishing to github, update your electron publisher
-    # config in package.json > "build" and remove the conditional below
     runs-on: ${{ matrix.os }}
 
     strategy:
