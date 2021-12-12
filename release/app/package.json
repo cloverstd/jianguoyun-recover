@@ -1,6 +1,6 @@
 {
   "name": "jianguoyun-recover",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "坚果云文件恢复助手",
   "main": "./dist/main/main.js",
   "author": {
