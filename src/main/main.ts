@@ -26,7 +26,36 @@ export default class AppUpdater {
 
 let mainWindow: BrowserWindow | null = null;
 
-Menu.setApplicationMenu(null);
+Menu.setApplicationMenu(
+  Menu.buildFromTemplate([
+    {
+      label: 'edit',
+      submenu: [
+        {
+          role: 'copy',
+          accelerator: process.platform === 'darwin' ? 'Cmd+C' : 'Control+C',
+          click: () => {
+            mainWindow?.webContents.copy();
+          },
+        },
+        {
+          role: 'paste',
+          accelerator: process.platform === 'darwin' ? 'Cmd+V' : 'Control+V',
+          click: () => {
+            mainWindow?.webContents.paste();
+          },
+        },
+        {
+          role: 'selectAll',
+          accelerator: process.platform === 'darwin' ? 'Cmd+A' : 'Control+A',
+          click: () => {
+            mainWindow?.webContents.selectAll();
+          },
+        },
+      ],
+    },
+  ])
+);
 
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');

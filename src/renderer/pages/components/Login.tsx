@@ -1,7 +1,35 @@
 import useRequest from '@ahooksjs/use-request';
-import { Form, Input, message, Modal } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { Form, Input, message, Modal, Popover, Space } from 'antd';
 import { AxiosError } from 'axios';
 import { getCurrentUser } from '../../service/api';
+
+const SessionIdLabel = () => {
+  return (
+    <Space>
+      <span>session id</span>
+      <Popover
+        title="获取 Session ID"
+        content={
+          <Space direction="vertical">
+            <span>1. 打开 https://www.jianguoyun.com 登录</span>
+            <span>2. 在页面任意地方右键，选择检查</span>
+            <span>3. 选择 Application（应用）</span>
+            <span>
+              4. 选择【Storage（储存）】-{'>'} Cookie -{'>'}{' '}
+              https://www.jianguoyun.com
+            </span>
+            <span>5. 找到 umn 一列，双击 Value（值）复制</span>
+          </Space>
+        }
+      >
+        <span>
+          <QuestionCircleOutlined />
+        </span>
+      </Popover>
+    </Space>
+  );
+};
 
 export default ({ visible, hide }: { visible: boolean; hide: () => void }) => {
   const [form] = Form.useForm<{ email: string; sessionid: string }>();
@@ -85,7 +113,7 @@ export default ({ visible, hide }: { visible: boolean; hide: () => void }) => {
             <Input />
           </Form.Item>
           <Form.Item
-            label="session id"
+            label={<SessionIdLabel />}
             name="sessionid"
             rules={[
               { required: true, message: 'Please input your session id!' },
