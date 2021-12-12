@@ -17,8 +17,8 @@ export default ({
   onDone: () => void;
   onPrev: () => void;
   onNext: (events: I.Jianguoyun.Event[]) => void;
-  opType: I.Jianguoyun.OpType;
-  range: [moment.Moment, moment.Moment];
+  opType: I.Jianguoyun.OpType | undefined;
+  range: [moment.Moment, moment.Moment] | undefined;
 }) => {
   const { sandboxId: sndboxId, magic: magicId, name } = sndbox;
 

@@ -32,6 +32,13 @@ Menu.setApplicationMenu(
       label: 'edit',
       submenu: [
         {
+          role: 'reload',
+          accelerator: process.platform === 'darwin' ? 'Cmd+R' : 'Control+R',
+          click: () => {
+            mainWindow?.webContents.reload();
+          },
+        },
+        {
           role: 'copy',
           accelerator: process.platform === 'darwin' ? 'Cmd+C' : 'Control+C',
           click: () => {

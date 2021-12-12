@@ -9,6 +9,7 @@
 
 .events-recover-progess {
   width: 100%;
+  margin-left: 20px;
 }
 
 .events-recover-progess .ant-progress-circle-gradient {
@@ -16,4 +17,35 @@
   height: 250px !important;
   display: block;
   margin: 20px auto;
+}
+
+.concurence {
+  width: 55px;
+}
+
+.recover-error-log {
+  height: 250px;
+}
+
+.recover-error-log .ant-page-header {
+  padding: 0;
+  height: 100%;
+}
+
+.recover-error-log .ant-page-header-heading-title {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.recover-error-log .ant-page-header-content {
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+}
+
+.recover-error-log .ant-list {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 3px 0;
 }
