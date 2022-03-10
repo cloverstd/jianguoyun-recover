@@ -211,13 +211,16 @@ export default ({
         }
       }
     } catch (e) {
-      if (auto && `${e}`.includes('timeout')) {
+      if (
+        auto &&
+        (`${e}`.includes('timeout') || `${e}`.includes('socket hang up'))
+      ) {
         addError(e);
         setLoading(true);
-        message.error('发生了一些错误，将会在 3 秒后自动重试');
+        message.error('发生了一些错误，将会在 2 秒后自动重试');
         setTimeout(() => {
           resume(sndboxId, magicId);
-        }, 3000);
+        }, 2000);
       } else {
         setError(e);
       }

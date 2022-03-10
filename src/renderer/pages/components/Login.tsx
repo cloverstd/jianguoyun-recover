@@ -16,10 +16,10 @@ const SessionIdLabel = () => {
             <span>2. 在页面任意地方右键，选择检查</span>
             <span>3. 选择 Application（应用）</span>
             <span>
-              4. 选择【Storage（储存）】-{'>'} Cookie -{'>'}{' '}
+              4. 选择【Storage（储存）】-{'>'} Cookies -{'>'}{' '}
               https://www.jianguoyun.com
             </span>
-            <span>5. 找到 umn 一列，双击 Value（值）复制</span>
+            <span>5. 找到 ta 一列，双击 Value（值）复制</span>
           </Space>
         }
       >

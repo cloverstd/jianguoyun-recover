@@ -33,7 +33,7 @@ export default ({
         const end = +range[1];
         let marker: number | undefined;
         let stop = false;
-        for (let i = 0; i < 10 && !stop; i += 1) {
+        for (let i = 0; !stop; i += 1) {
           // eslint-disable-next-line no-await-in-loop
           const data = await getEvents(sndboxId, magicId, marker);
           marker = data.marker;
